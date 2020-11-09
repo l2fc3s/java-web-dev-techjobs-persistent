@@ -18,13 +18,6 @@ public abstract class AbstractEntity {
     @Size(min = 3, max = 150, message="Name must be between 3 and 150 characters.")
     private String name;
 
-    public AbstractEntity(int id, @NotBlank @Size(min = 3, max = 150, message = "Name must be between 3 and 150 characters.") String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public AbstractEntity() {}
-
     public int getId() {
         return id;
     }
