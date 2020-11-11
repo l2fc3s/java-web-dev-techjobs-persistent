@@ -17,3 +17,12 @@ DROP TABLE `techjobs`.`job`;
 
 
 ## Part 4: Test it with SQL
+
+SELECT name, skill_description
+FROM skill
+WHERE id IN(
+	SELECT skills_id
+    FROM job_skills
+    WHERE skills_id is not null
+)
+ORDER BY name ASC;
